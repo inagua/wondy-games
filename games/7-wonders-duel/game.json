@@ -1,7 +1,7 @@
 {
   "schema": "wondy-1.0",
   "version": "1.0",
-  "title": "7 Wonders Duel",
+  "title": "7 Wonders Duel Samp'",
   "description": "Développez votre science et votre armée, construisez de prestigieux bâtiments et menez votre civilisation à la victoire dans l'univers de son célébrissime aïeul \"7 Wonders\".",
   "image": "assets/7w2/images/header.jpg",
   "authors": [{ "firstName": "", "lastName": "", "email": "", "site": "http://inagua.ch", "by": "jacques" }],
