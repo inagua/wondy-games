@@ -58,6 +58,41 @@
       }
     ]
   },
+  "scores": {
+    "players": 2,
+    "icon": "calculator",
+    "title": "Calculateur de scores",
+    "description": "",
+    "rows": [
+      {
+        "icon": "tablet-portrait",
+        "color": "#273A77",
+        "avatar": "",
+        "title": "Bâtiments civils",
+        "subtitle": "Cartes bleues",
+        "description": "Combien de points Victoire sur vos cartes bleues",
+        "image": "assets/7w2/images/cards/batiments-civils-header.jpg"
+      },
+      {
+        "icon": "radio-button-on",
+        "color": "#EA872F",
+        "avatar": "",
+        "title": "Le trésor de la cité",
+        "subtitle": "Pièces",
+        "description": "Chaque lot complet de 3 pièces rapporte 1 point",
+        "image": ""
+      },
+      {
+        "icon": "",
+        "color": "#D8272E",
+        "avatar": "assets/7w2/images/icons/ico-armee.png",
+        "title": "Militaire",
+        "subtitle": "Pion Conflit",
+        "description": "0, 2, 5 ou 10 en fonction de la position du pion Conflit",
+        "image": "assets/7w2/images/supremacie-militaire.png"
+      }
+    ]
+  },
   "library": {
     "documents": [
       {

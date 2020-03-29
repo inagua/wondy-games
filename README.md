@@ -18,8 +18,8 @@ Pour pouvoir importer votre jeu dans l'application mobile il vous faut créer un
   "rate": 99,
   "cars": ["Batmobile 1", "Batmobile 2"],
   "friends": [
-    { name: "Robin" },
-    { name: "Catwoman" }
+    { "name": "Robin" },
+    { "name": "Catwoman" }
   ]
 }
 ``` 
@@ -43,6 +43,7 @@ Dans cet exemple :
   "authors": [...],
   "sections": [...],
   "cards": [...],
+  "scores": ,
 }
 ```
 
@@ -142,5 +143,54 @@ Un item est une carte.
     "title": "La Palace",
     "category": "Bâtiment Civil",
     "image": "assets/7w2/images/cards/batiments-civils.jpg"
+}
+```
+
+### Scores
+
+Un des principaux intéret de l'application mobile est d'aider à calculer les scores finaux car, n'en déplaise à Pierre de Coubertin, 
+l'important est quand même de faire la misère à l'adversaire ;)
+
+Le calculateur de scores est affiché comme un tableaur, à savoir des lignes de scores (`row`) et de colonnes pour chaque joueurs (`players`). Le calculateur 
+calcule alors le total par joueur.
+La première colonne indique l'icône de la ligne de score et lorsque l'on clique dessus s'affiche le détail de la ligne de score (image, titre, description...).
+
+```json
+{
+    "players": 2,
+    "icon": "calculator",
+    "title": "Calculateur de scores",
+    "description": "",
+    "rows": [...]
+}
+```
+
+- `icon` : icône de la section des scores, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/
+- `title` : le nom de la section, qui sera affiché à l'écran
+- `description` : un descriptif de la section, qui sera affiché à l'écran
+- `players` : nombre de joueurs maximum
+- `rows` : liste des lignes de scores, voir ci-dessous
+
+#### Row
+
+Une `row` est une ligne de score, par exemple "Le nombre de pièces d'or" et "Le nombre de points de victoire".
+
+- `icon` : icône de la section des cartes, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com
+- `color` : couleur de l'icône, [au format CSS](https://developer.mozilla.org/fr/docs/Web/CSS/Couleurs_CSS/S%C3%A9lecteur_de_couleurs) comme par exemple `#FF0000` pour un rouge moche ;)
+- `avatar` : URL de l'image qui servira d'icone de la ligne (si `icon` et `avatar` sont renseignés, ce dernier sera utilisé)
+- `title` : le libellé de la ligne de score
+- `subtitle` : sous titre de la ligne de score
+- `description` : un descriptif de la section, qui sera affiché à l'écran
+- `image` : l'URL d'une image qui sera affichée au dessus du détail
+
+```json
+{
+    "icon": "",
+    "color": "#D8272E",
+    "avatar": "assets/7w2/images/icons/ico-armee.png",
+    "title": "Militaire",
+    "subtitle": "Pion Conflit",
+    "description": "0, 2, 5 ou 10 en fonction de la position du pion Conflit",
+    "image": "assets/7w2/images/supremacie-militaire.png"
 }
 ```
