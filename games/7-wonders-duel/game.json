@@ -37,6 +37,7 @@
     }
   ],
   "cards": {
+    "icon": "layers",
     "title": "Quelques cartes",
     "description": "",
     "items": [

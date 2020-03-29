@@ -42,6 +42,7 @@ Dans cet exemple :
   "image": "assets/7w2/images/header.jpg",
   "authors": [...],
   "sections": [...],
+  "cards": [...],
 }
 ```
 
@@ -54,6 +55,7 @@ Voici en détail la structure du fichier texte JSON.
 - `image` : l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage)
 - `autors` : tableau des auteurs du document, voir plus bas
 - `sections` : tableau des sections, voir plus bas
+- `cards` : tableau de cartes, voir plus bas
 
 ### Authors
 
@@ -102,7 +104,7 @@ Un groupe est un ensemble d'instructions.
 
 #### Item
 
-Un item est une instrusction.
+Un item est une instruction.
 
 - `fr` : le libellé de l'instruction en français
 - `image` : l'URL d'une image qui sera affichée en plein écran lorsque l'utilisateur clique sur l'instruction
@@ -115,5 +117,30 @@ NB : Si à la fois `image` et `document` sont renseignés, seule `image` sera co
   "fr": "Placez le pion Conflit sur la case neutre au milieu du plateau.",
   "image": "https://mon.site.com/assets/7w2/images/supremacie-militaire.png",
   "document": "https://mon.site.com/assets/7w2/pdfs/7-Wonders-Duel-Rules-FR.pdf"
+}
+```
+
+### Cards
+
+Il est possible d'afficher des cartes, avec une image et leurs détails
+
+- `icon` : icône de la section des cartes, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/
+- `title` : le nom de la section, qui sera affiché à l'écran
+- `description` : un descriptif de la section, qui sera affiché à l'écran
+- `items` : tableau des cartes, voir ci-dessous
+
+#### Item
+
+Un item est une carte.
+
+- `title` : le libellé de la carte
+- `category` : groupe auquel appartient la carte
+- `image` : l'URL d'une image qui sera affichée en plein écran
+
+```json
+{
+    "title": "La Palace",
+    "category": "Bâtiment Civil",
+    "image": "assets/7w2/images/cards/batiments-civils.jpg"
 }
 ```
