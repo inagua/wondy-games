@@ -9,7 +9,7 @@ Table des matières
 
 - [A toi de jouer](#a-toi-de-jouer)
 - [Exemples](#exemples)
-- [Introduction à JSON](##introduction-%C3%A0-json)
+- [Introduction à JSON](#introduction-%C3%A0-json)
   -  [Edition](#edition)
 - [Structure](#structure)
   -  [Authors](#authors)
@@ -120,10 +120,11 @@ Voici en détail la structure du fichier texte JSON.
 - `title` : le nom du jeu, qui sera affiché à l'écran
 - `description` : un descriptif du jeu, qui sera affiché à l'écran
 - `image` : l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]
-- `authors` : tableau des auteurs du document, voir plus bas [facultatif]
-- `sections` : tableau des sections, voir plus bas
-- `cards` : liste de cartes, voir plus bas [facultatif]
-- `library` : liste de ressources, voir plus bas [facultatif]
+- `authors` : tableau des auteurs du document, [voir plus bas](#authors) [facultatif]
+- `sections` : tableau des sections, [voir plus bas](#sections)
+- `cards` : liste de cartes, [voir plus bas](#cards) [facultatif]
+- `scores` : configuration du calculateur de scors, [voir plus bas](#scores) [facultatif]
+- `library` : liste de ressources, [voir plus bas]](#library) [facultatif]
 
 ### Authors
 
