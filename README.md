@@ -5,6 +5,28 @@
 >
 > Il s'agit d'un service ouvert : vous pouvez créer vos propres règles, soit pour vos jeux préférés, soit créer votre jeu.
 
+Table des matières
+
+- [A toi de jouer](#a-toi-de-jouer)
+- [Exemples](#exemples)
+- [Introduction à JSON](##introduction-%C3%A0-json)
+  -  [Edition](#edition)
+- [Structure](#structure)
+  -  [Authors](#authors)
+  -  [Sections](#sections)
+     - [Section](#section)
+     - [Group](#group)
+     - [Item](#item)
+  -  [Cards](#cards)
+     - [Item](#item-1)
+  -  [Scores](#scores)
+     - [Row](#row)
+  -  [Library](#library)
+     - [Document](#document)
+
+
+## A toi de jouer
+
 Il vous suffit de créer un fichier texte (dans un format particulier JSON [expliqué plus bas](#introduction)) puis :
  - soit vous hébergez ce fichier sur votre site (pour qu'il puisse être téléchargé depsuis l'application mobile)
  - soit il est possible de l'héberger ici gratuitement
