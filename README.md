@@ -124,7 +124,7 @@ Voici en détail la structure du fichier texte JSON.
 - `sections` : tableau des sections, [voir plus bas](#sections)
 - `cards` : liste de cartes, [voir plus bas](#cards) [facultatif]
 - `scores` : configuration du calculateur de scors, [voir plus bas](#scores) [facultatif]
-- `library` : liste de ressources, [voir plus bas]](#library) [facultatif]
+- `library` : liste de ressources, [voir plus bas](#library) [facultatif]
 
 ### Authors
 
