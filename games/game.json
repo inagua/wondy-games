@@ -1,0 +1,73 @@
+{
+  "schema": "la version de la structure du fichier utilisée (courante : wondy-1.0)",
+  "version": "la version de votre fichier, de son contenu (à gérer par l'auteur du fichier, par exemple '1.0', puis '1.1' en cas de modification)",
+  "title": "le nom du jeu, qui sera affiché à l'écran",
+  "description": "un descriptif du jeu, qui sera affiché à l'écran",
+  "image": "l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]",
+  "authors": [
+    {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse email",
+      "site": "URL",
+      "by": "cette valeur pour le premier auteur sera affichée en bas de l'écran d'accueil du jeu dans l'application mobile"
+    }
+  ],
+  "sections": [
+    {
+      "id": "Identifiant de la section. Il s'agit d'un texte libre (avec uniquement des lettres et des chiffres) mais chaque section doit avoir un id unique (par exemple 'SetupSection')",
+      "icon": "icône de la section, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/ (par exemple 'bonfire')",
+      "title": "le nom de la section, qui sera affiché à l'écran (par exemple 'Mise en place')",
+      "description": "un descriptif de la section, qui sera affiché à l'écran (par exemple 'Préparation d'une nouvelle partie')",
+      "groups": [
+        {
+          "title": "le nom du groupe, qui sera affiché à l'écran (par exemple 'Air de jeu')",
+          "items": [
+            {
+              "fr": "le libellé de l'instruction en français (par exemple 'Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu')",
+              "image": "l'URL d'une image qui sera affichée en plein écran lorsque l'utilisateur clique sur l'instruction (par exemple 'http://mon.site.com/image.png') [facultatif]",
+              "document": "l'URL d'un document qui sera affiché en plein écran lorsque l'utilisateur clique sur l'instruction (par exemple 'http://mon.site.com/regles.pdf'). Si image et document sont renseignés alors seul image sera utilisé. [facultatif]"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cards": {
+    "icon": "icône de la section des cartes, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/ (par exemple 'layers')",
+    "title": "le nom de la section des cartes, qui sera affiché à l'écran sur la page d'accueil du jeu (par exemple 'Quelques cartes')",
+    "description": "un descriptif de la section, qui sera affiché à l'écran",
+    "items": [
+      {
+        "title": "le libellé de la carte, qui sera affiché sur l'écran de la carte (par exemple 'le palace') [facultatif]",
+        "category": "groupe auquel appartient la carte (par exemple 'Bâtiment Civil') [facultatif]",
+        "image": "l'URL d'une image qui sera affichée en plein écran (par exemple 'http://mon.site.com/card-01.png')"
+      }
+    ]
+  },
+  "scores": {
+    "players": "nombre de joueurs maximum qui deternmine le nombre de colonnes à remplir qui s'afficheront (par exemple le nombre '4' sans guillemet)",
+    "icon": "icône de la section des scores, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/ (par exemple 'calculator')",
+    "title": "le nom de la section, qui sera affiché à l'écran sur la page d'accueil du jeu (par exemple 'Calculateur de scores')",
+    "description": "un descriptif de la section, qui sera affiché à l'écran sur la page d'accueil du jeu",
+    "rows": [
+      {
+        "icon": "icône de la section des cartes, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com (par exemple 'tablet-portrait')",
+        "color": "couleur de l'icône, au format CSS (par exemple '#273A77')",
+        "avatar": "URL de l'image qui servira d'icone de la ligne (par exemple 'http://mon.site.com/civil-icon.png'). Si icon et avatar sont renseignés, seul avatar sera utilisé",
+        "title": "le libellé de la ligne de score qui est affiché dans le détail quand on clique sur l'icone (par exemple 'Bâtiments civils')",
+        "subtitle": "sous titre de la ligne de score qui est affiché dans le détail quand on clique sur l'icone (par exemple 'Cartes bleues')",
+        "description": "un descriptif de la section qui est affiché dans le détail quand on clique sur l'icone (par exemple 'Combien de points Victoire sur vos cartes bleues')",
+        "image": "l'URL d'une image qui sera affichée au dessus du détail (par exemple 'http://mon.site.com/batiments-civils.jpg')"
+      }
+    ]
+  },
+  "library": {
+    "documents": [
+      {
+        "title": "le libellé du document, qui sera affiché sur l'écran d'accueil de la section (par exemple 'Règles du jeu')",
+        "path": "l'URL où le document sera téléchargé pour être consulté en plein écran (par exemple http://mon.site.com/7-Wonders-Duel-Rules-FR.pdf')"
+      }
+    ]
+  }
+}
