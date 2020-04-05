@@ -1,0 +1,277 @@
+{
+  $schema: 'http://json-schema.org/draft-07/schema#',
+  $id: 'http://example.com/product.schema.json',
+  title: 'Wondy Game',
+  description: '',
+  type: 'object',
+  properties: {
+    schema: {
+      description: 'la version de la structure du fichier utilisée (courante : wondy-1.0)',
+      type: 'string'
+    },
+    version: {
+      description: 'la version de votre fichier, de son contenu (à gérer par l\'auteur du fichier, par exemple \'1.0\', puis \'1.1\' en cas de modification)',
+      type: 'string'
+    },
+    title: {
+      description: 'le nom du jeu, qui sera affiché à l\'écran',
+      type: 'string'
+    },
+    description: {
+      description: 'un descriptif du jeu, qui sera affiché à l\'écran',
+      type: 'string'
+    },
+    image: {
+      description: 'l\'URL d\'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]',
+      type: 'string'
+    },
+    authors: {
+      description: 'tableau des auteurs du document',
+      type: 'array',
+      items: {
+        description: '',
+        type: 'object',
+        properties: {
+          firstName: {
+            description: 'Prénom',
+            type: 'string'
+          },
+          lastName: {
+            description: 'Nom',
+            type: 'string'
+          },
+          email: {
+            description: 'Adresse email',
+            type: 'string'
+          },
+          site: {
+            description: 'URL',
+            type: 'string'
+          },
+          by: {
+            description: 'cette valeur pour le premier auteur sera affichée en bas de l\'écran d\'accueil du jeu dans l\'application mobile',
+            type: 'string'
+          }
+        }
+      }
+    },
+    sections: {
+      description: 'différentes parties du instructions',
+      type: 'array',
+      items: {
+        description: '',
+        type: 'object',
+        properties: {
+          id: {
+            description: 'Identifiant de la section. Il s\'agit d\'un texte libre (avec uniquement des lettres et des chiffres) mais chaque section doit avoir un id unique (par exemple \'SetupSection\')',
+            type: 'string'
+          },
+          icon: {
+            description: 'icône de la section, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/ (par exemple \'bonfire\')',
+            type: 'string'
+          },
+          title: {
+            description: 'le nom de la section, qui sera affiché à l\'écran (par exemple \'Mise en place\')',
+            type: 'string'
+          },
+          description: {
+            description: 'un descriptif de la section, qui sera affiché à l\'écran (par exemple \'Préparation d\'une nouvelle partie\')',
+            type: 'string'
+          },
+          groups: {
+            description: 'tableau de groupes d\'instructions',
+            type: 'array',
+            items: {
+              description: '',
+              type: 'object',
+              properties: {
+                title: {
+                  description: 'le nom du groupe, qui sera affiché à l\'écran (par exemple \'Air de jeu\')',
+                  type: 'string'
+                },
+                items: {
+                  description: 'tableau d\'instrucions',
+                  type: 'array',
+                  items: {
+                    description: '',
+                    type: 'object',
+                    properties: {
+                      fr: {
+                        description: 'le libellé de l\'instruction en français (par exemple \'Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu\')',
+                        type: 'string'
+                      },
+                      image: {
+                        description: 'l\'URL d\'une image qui sera affichée en plein écran lorsque l\'utilisateur clique sur l\'instruction (par exemple \'http://mon.site.com/image.png\') [facultatif]',
+                        type: 'string'
+                      },
+                      document: {
+                        description: 'l\'URL d\'un document qui sera affiché en plein écran lorsque l\'utilisateur clique sur l\'instruction (par exemple \'http://mon.site.com/regles.pdf\'). Si image et document sont renseignés alors seul image sera utilisé. [facultatif]',
+                        type: 'string'
+                      }
+                    }
+                  }
+                }
+              },
+              required: [
+                'title',
+                'items'
+              ]
+            }
+          }
+        },
+        required: [
+          'id',
+          'title',
+          'groups'
+        ]
+      }
+    },
+    cards: {
+      description: 'cartes à présenter',
+      type: 'object',
+      properties: {
+        icon: {
+          description: 'icône de la section, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/ (par exemple \'bonfire\')',
+          type: 'string'
+        },
+        title: {
+          description: 'le nom de la section, qui sera affiché à l\'écran (par exemple \'Mise en place\')',
+          type: 'string'
+        },
+        description: {
+          description: 'un descriptif de la section, qui sera affiché à l\'écran (par exemple \'Préparation d\'une nouvelle partie\')',
+          type: 'string'
+        },
+        items: {
+          description: 'tableau d\'instrucions',
+          type: 'array',
+          items: {
+            description: '',
+            type: 'object',
+            properties: {
+              title: {
+                description: 'le libellé de la carte, qui sera affiché sur l\'écran de la carte (par exemple \'le palace\') [facultatif]',
+                type: 'string'
+              },
+              category: {
+                description: 'groupe auquel appartient la carte (par exemple \'Bâtiment Civil\') [facultatif]',
+                type: 'string'
+              },
+              image: {
+                description: 'l\'URL d\'une image qui sera affichée en plein écran (par exemple \'http://mon.site.com/card-01.png\')',
+                type: 'string'
+              }
+            },
+            required: [
+              'image'
+            ]
+          }
+        }
+      },
+      required: [
+        'title',
+        'items'
+      ]
+    },
+    scores: {
+      description: 'configuration du calculateur de scores',
+      type: 'object',
+      properties: {
+        players: {
+          description: 'nombre de joueurs maximum qui deternmine le nombre de colonnes à remplir qui s\'afficheront (par exemple le nombre \'4\' sans guillemet)',
+          type: 'number'
+        },
+        icon: {
+          description: 'icône de la section des scores, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com/ (par exemple \'calculator\')',
+          type: 'string'
+        },
+        title: {
+          description: 'le nom de la section, qui sera affiché à l\'écran sur la page d\'accueil du jeu (par exemple \'Calculateur de scores\')',
+          type: 'string'
+        },
+        description: {
+          description: 'un descriptif de la section, qui sera affiché à l\'écran sur la page d\'accueil du jeu',
+          type: 'string'
+        },
+        rows: {
+          description: 'liste des lignes de scores',
+          type: 'array',
+          items: {
+            description: '',
+            type: 'object',
+            properties: {
+              icon: {
+                description: 'icône de la section des cartes, à choisir parmi ceux disponible dans le framework Ionic utilisé sur https://ionicons.com (par exemple \'tablet-portrait\')',
+                type: 'string'
+              },
+              color: {
+                description: 'couleur de l\'icône, au format CSS (par exemple \'#273A77\')',
+                type: 'string'
+              },
+              avatar: {
+                description: 'URL de l\'image qui servira d\'icone de la ligne (par exemple \'http://mon.site.com/civil-icon.png\'). Si icon et avatar sont renseignés, seul avatar sera utilisé',
+                type: 'string'
+              },
+              title: {
+                description: 'le libellé de la ligne de score qui est affiché dans le détail quand on clique sur l\'icone (par exemple \'Bâtiments civils\')',
+                type: 'string'
+              },
+              subtitle: {
+                description: 'sous titre de la ligne de score qui est affiché dans le détail quand on clique sur l\'icone (par exemple \'Cartes bleues\')',
+                type: 'string'
+              },
+              description: {
+                description: 'un descriptif de la section qui est affiché dans le détail quand on clique sur l\'icone (par exemple \'Combien de points Victoire sur vos cartes bleues\')',
+                type: 'string'
+              },
+              image: {
+                description: 'l\'URL d\'une image qui sera affichée au dessus du détail (par exemple \'http://mon.site.com/batiments-civils.jpg\')',
+                type: 'string'
+              }
+            }
+          }
+        }
+      },
+      required: [
+        'players',
+        'title'
+      ]
+    },
+    library: {
+      description: 'liste de documents à consulter',
+      type: 'object',
+      properties: {
+        documents: {
+          description: 'tableau des documents',
+          type: 'array',
+          items: {
+            description: 'Un document, par exemple un PDF',
+            type: 'object',
+            properties: {
+              title: {
+                description: 'le libellé du document, qui sera affiché sur l\'écran d\'accueil de la section (par exemple \'Règles du jeu\')',
+                type: 'string'
+              },
+              path: {
+                description: 'l\'URL où le document sera téléchargé pour être consulté en plein écran (par exemple http://mon.site.com/7-Wonders-Duel-Rules-FR.pdf\')',
+                type: 'string'
+              }
+            },
+            required: [
+              'title',
+              'path'
+            ]
+          }
+        }
+      },
+      required: [
+        'documents'
+      ]
+    }
+  },
+  required: [
+    'schema',
+    'version',
+    'title'
+  ]
+}

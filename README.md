@@ -3,12 +3,13 @@
 > Wondy est une application mobile qui permet de centraliser les règles et autres outils pour des jeux de société, comme 
 > des calculateurs de scores ou des cartes du jeu.
 >
-> Il s'agit d'un service ouvert : vous pouvez créer vos propres règles, soit pour vos jeux préférés, soit créer votre jeu.
+> Il s'agit d'un service ouvert, évolutif et personnalisable : vous pouvez créer vos propres règles ou simplement en traduire 
+> dans votre langue, soit pour vos jeux préférés, soit créer votre jeu.
 
 Table des matières
 
 - [A toi de jouer](#a-toi-de-jouer)
-- [Exemples](#exemples)
+- [Schema & Exemples](#schema-&-exemples)
 - [Introduction à JSON](#introduction-%C3%A0-json)
   -  [Edition](#edition)
 - [Structure](#structure)
@@ -36,9 +37,13 @@ permettant ainsi d'être facilement accessible depuis l'application mobile. Dans
 indiquer son URL dans l'écran d'import de l'application mobile.
 
 
-## Exemples
+## Schema & Exemples
 
-Il y a deux fichiers d'exemple:
+Vous pouvez utiliser le fichier Schéma JSON selon la norme [JSON Schema](https://json-schema.org/) :
+
+- [Le fichier JSON Schema Wondy](https://raw.githubusercontent.com/inagua/wondy-games/master/games/game.schema.json)
+
+Il y a également deux fichiers JSON d'exemple :
 
 1. [Le fichier partiel](https://raw.githubusercontent.com/inagua/wondy-games/master/games/7-wonders-duel/game.json) qui est une partie de celui qui sert pour le jeu fournit avec l'application "7 Wonders - Duel"  
 1. [Le fichier explicatif](https://raw.githubusercontent.com/inagua/wondy-games/master/games/game.json) qui reprend un élément de tout ce qui est disponible avec l'explication à la place des valeurs  
@@ -123,7 +128,7 @@ Voici en détail la structure du fichier texte JSON.
 - `authors` : tableau des auteurs du document, [voir plus bas](#authors) [facultatif]
 - `sections` : tableau des sections, [voir plus bas](#sections)
 - `cards` : liste de cartes, [voir plus bas](#cards) [facultatif]
-- `scores` : configuration du calculateur de scors, [voir plus bas](#scores) [facultatif]
+- `scores` : configuration du calculateur de scores, [voir plus bas](#scores) [facultatif]
 - `library` : liste de ressources, [voir plus bas](#library) [facultatif]
 
 ### Authors
