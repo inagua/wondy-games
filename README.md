@@ -9,7 +9,7 @@
 Table des matières
 
 - [A toi de jouer](#a-toi-de-jouer)
-- [Schema & Exemples](#schema-&-exemples)
+- [Schema & Exemples](#schema--exemples)
 - [Introduction à JSON](#introduction-%C3%A0-json)
   -  [Edition](#edition)
 - [Structure](#structure)
