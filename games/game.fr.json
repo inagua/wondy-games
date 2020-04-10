@@ -4,6 +4,10 @@
   "title": "le nom du jeu, qui sera affiché à l'écran",
   "description": "un descriptif du jeu, qui sera affiché à l'écran",
   "image": "l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]",
+  "language": {
+    "code": "Code 2-lettres (ISO 639-1, https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) de la langue supportée dans le jeu, mais qui n'est pas la langue de l'application. Se retrouve dans l'extention du fichier. (par exemple 'fr')",
+    "label": "Texte qui sera affiché pour la langue dans la description des jeux. Il est recommandé de l'écrire dans sa propre langue (par exemple 'français' pour le français et 'English'  pour l'anglais)"
+  },
   "authors": [
     {
       "firstName": "Prénom",
@@ -24,7 +28,7 @@
           "title": "le nom du groupe, qui sera affiché à l'écran (par exemple 'Air de jeu')",
           "items": [
             {
-              "fr": "le libellé de l'instruction en français (par exemple 'Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu')",
+              "label": "le libellé de l'instruction en français (par exemple 'Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu')",
               "image": "l'URL d'une image qui sera affichée en plein écran lorsque l'utilisateur clique sur l'instruction (par exemple 'http://mon.site.com/image.png') [facultatif]",
               "document": "l'URL d'un document qui sera affiché en plein écran lorsque l'utilisateur clique sur l'instruction (par exemple 'http://mon.site.com/regles.pdf'). Si image et document sont renseignés alors seul image sera utilisé. [facultatif]"
             }

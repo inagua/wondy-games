@@ -4,6 +4,10 @@
   "title": "7 Wonders Duel Samp'",
   "description": "Développez votre science et votre armée, construisez de prestigieux bâtiments et menez votre civilisation à la victoire dans l'univers de son célébrissime aïeul \"7 Wonders\".",
   "image": "http://www.edgeent.com/sisimg/catalog/site/rp7d0001.jpg",
+  "language": {
+    "code": "fr",
+    "label": "français"
+  },
   "authors": [
     {
       "firstName": "",
@@ -24,10 +28,10 @@
           "title": "Air de jeu",
           "items": [
             {
-              "fr": "Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu."
+              "label": "Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu."
             },
             {
-              "fr": "Placez le pion Conflit sur la case neutre au milieu du plateau.",
+              "label": "Placez le pion Conflit sur la case neutre au milieu du plateau.",
               "image": "https://www.7wondersduel.com/images/layout/supremacie-militaire.png"
             }
           ]
@@ -36,7 +40,7 @@
           "title": "Bibliothèque",
           "items": [
             {
-              "fr": "Règles du jeu",
+              "label": "Règles du jeu",
               "document": "https://www.7wondersduel.com/files/rules/7-Wonders-Duel-Rules-FR.pdf"
             }
           ]

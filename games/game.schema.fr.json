@@ -2,28 +2,46 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/inagua/wondy-games/blob/master/games/game.schema.json",
   "title": "Wondy Game",
-  "description": "",
+  "description": "Schéma du fichier JSON d'un jeu Wondy",
   "type": "object",
   "properties": {
     "schema": {
-      "description": "la version de la structure du fichier utilisée (courante : wondy-1.0)",
+      "description": "La version de la structure du fichier utilisée (courante : wondy-1.0)",
       "type": "string"
     },
     "version": {
-      "description": "la version de votre fichier, de son contenu (à gérer par l'auteur du fichier, par exemple '1.0', puis '1.1' en cas de modification)",
+      "description": "La version de votre fichier, de son contenu (à gérer par l'auteur du fichier, par exemple '1.0', puis '1.1' en cas de modification)",
       "type": "string"
     },
     "title": {
-      "description": "le nom du jeu, qui sera affiché à l'écran",
+      "description": "Le nom du jeu, qui sera affiché à l'écran",
       "type": "string"
     },
     "description": {
-      "description": "un descriptif du jeu, qui sera affiché à l'écran",
+      "description": "Un descriptif du jeu, qui sera affiché à l'écran",
       "type": "string"
     },
     "image": {
-      "description": "l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]",
+      "description": "L'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]",
       "type": "string"
+    },
+    "language": {
+      "description": "La langue dans laquel est rédigé ce document",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Code 2-lettres (ISO 639-1, https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) de la langue supportée dans le jeu, mais qui n'est pas la langue de l'application. Se retrouve dans l'extention du fichier. (par exemple 'fr')",
+          "type": "string"
+        },
+        "label": {
+          "description": "Texte qui sera affiché pour la langue dans la description des jeux. Il est recommandé de l'écrire dans sa propre langue (par exemple 'français' pour le français et 'English'  pour l'anglais)",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "label"
+      ]
     },
     "authors": {
       "description": "tableau des auteurs du document",
@@ -96,7 +114,7 @@
                     "description": "",
                     "type": "object",
                     "properties": {
-                      "fr": {
+                      "label": {
                         "description": "le libellé de l'instruction en français (par exemple 'Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu')",
                         "type": "string"
                       },
@@ -272,6 +290,8 @@
   "required": [
     "schema",
     "version",
-    "title"
+    "title",
+    "description",
+    "language"
   ]
 }

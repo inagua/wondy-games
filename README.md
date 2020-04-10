@@ -41,12 +41,12 @@ indiquer son URL dans l'écran d'import de l'application mobile.
 
 Vous pouvez utiliser le fichier Schéma JSON selon la norme [JSON Schema](https://json-schema.org/) :
 
-- [Le fichier JSON Schema Wondy](https://raw.githubusercontent.com/inagua/wondy-games/master/games/game.schema.json)
+- [Le fichier JSON Schema Wondy en français](https://raw.githubusercontent.com/inagua/wondy-games/master/games/game.schema.fr.json)
 
 Il y a également deux fichiers JSON d'exemple :
 
-1. [Le fichier partiel](https://raw.githubusercontent.com/inagua/wondy-games/master/games/7-wonders-duel/game.json) qui est une partie de celui qui sert pour le jeu fournit avec l'application "7 Wonders - Duel"  
-1. [Le fichier explicatif](https://raw.githubusercontent.com/inagua/wondy-games/master/games/game.json) qui reprend un élément de tout ce qui est disponible avec l'explication à la place des valeurs  
+1. [Le fichier partiel en français](https://raw.githubusercontent.com/inagua/wondy-games/master/games/7-wonders-duel/game.fr.json) qui est une partie de celui qui sert pour le jeu fournit avec l'application "7 Wonders - Duel"  
+1. [Le fichier explicatif en français](https://raw.githubusercontent.com/inagua/wondy-games/master/games/game.fr.json) qui reprend un élément de tout ce qui est disponible avec l'explication à la place des valeurs  
 
 ## Introduction à JSON
 
@@ -86,7 +86,7 @@ Edition en ligne :
 
 - Utiliser par exemple : https://jsonformatter.org/json-editor
 - Dans les boutons au milieu cliquer sur "Load Data"
-- Renseigner l'URL du fichier de référence : https://raw.githubusercontent.com/inagua/wondy-games/master/games/7-wonders-duel/game.json
+- Renseigner l'URL du fichier de référence : https://raw.githubusercontent.com/inagua/wondy-games/master/games/7-wonders-duel/game.fr.json
 - Puis cliquer sur "Close"
 
 Vous pouvez alors au choix éditer dans la partie gauche (texte brut), ou la partie droite (édition élaborée), et synchroniser 
@@ -110,6 +110,7 @@ pour ne pas perdre votre travail).
   "title": "7 Wonders Duel",
   "description": "Développez votre science et ...",
   "image": "http://mon.site.com/assets/images/header.jpg",
+  "language": {...},
   "authors": [...],
   "sections": [...],
   "cards": {...},
@@ -125,11 +126,27 @@ Voici en détail la structure du fichier texte JSON.
 - `title` : le nom du jeu, qui sera affiché à l'écran
 - `description` : un descriptif du jeu, qui sera affiché à l'écran
 - `image` : l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]
+- `language` : La langue dans laquel est rédigé le document, [voir plus bas](#language)
 - `authors` : tableau des auteurs du document, [voir plus bas](#authors) [facultatif]
 - `sections` : tableau des sections, [voir plus bas](#sections)
 - `cards` : liste de cartes, [voir plus bas](#cards) [facultatif]
 - `scores` : configuration du calculateur de scores, [voir plus bas](#scores) [facultatif]
 - `library` : liste de ressources, [voir plus bas](#library) [facultatif]
+
+
+### Language
+
+La langue dans laquel est rédigé le document : 
+
+```json
+{ 
+    "code": "fr",
+    "label": "français"
+}
+```
+
+- `code`: "Code 2-lettres [ISO 639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) de la langue supportée dans le jeu, mais qui n'est pas la langue de l'application. Se retrouve dans l'extention du fichier. (par exemple `fr`)",
+- `label` : "Texte qui sera affiché pour la langue dans la description des jeux. Il est recommandé de l'écrire dans sa propre langue (par exemple `français` pour le français et `English` pour l'anglais)"
 
 ### Authors
 
