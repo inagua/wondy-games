@@ -13,6 +13,10 @@
       "description": "La version de votre fichier, de son contenu (à gérer par l'auteur du fichier, par exemple '1.0', puis '1.1' en cas de modification)",
       "type": "string"
     },
+    "updatedAt": {
+      "description": "la date et l'heure à laquelle ce document a été mis à jour, au format ISO 8601 (https://fr.wikipedia.org/wiki/ISO_8601) (par exemple '2020-04-10T11:40:24+02:00')",
+      "type": "string"
+    },
     "title": {
       "description": "Le nom du jeu, qui sera affiché à l'écran",
       "type": "string"
@@ -290,6 +294,7 @@
   "required": [
     "schema",
     "version",
+    "updatedAt",
     "title",
     "description",
     "language"

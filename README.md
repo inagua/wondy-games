@@ -123,6 +123,7 @@ Voici en détail la structure du fichier texte JSON.
 
 - `schema` : la version de la structure du fichier utilisée (courante : `wondy-1.0`)
 - `version` : la version de votre fichier, de son contenu (à gérer par l'auteur du fichier, par exemple 1.0, puis 1.1 en cas de modification)
+- `updatedAt` : la date et l'heure à laquelle ce document a été mis à jour, au format [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) (par exemple `2020-04-10T11:40:24+02:00`)
 - `title` : le nom du jeu, qui sera affiché à l'écran
 - `description` : un descriptif du jeu, qui sera affiché à l'écran
 - `image` : l'URL d'une image qui sera utilisée sur la homepage du jeu (privilégier une image au format paysage) [facultatif]
