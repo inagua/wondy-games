@@ -9,6 +9,7 @@
 Table des matières
 
 - [Fonctionnalités](#fonctionnalités)
+- [Politique de confidentialité](#politique-de-confidentialité)
 - [A toi de jouer](#a-toi-de-jouer)
 - [Schema & Exemples](#schema--exemples)
 - [Introduction à JSON](#introduction-%C3%A0-json)
@@ -30,6 +31,11 @@ Table des matières
 ## Fonctionnalités
 
 Voir la page des [Release Notes](https://inagua.github.io/wondy-games/RELEASENOTES#v100).
+
+
+## Politique de confidentialité
+
+Voir la page [Politique de confidentialité](https://inagua.github.io/wondy-games/privacy).
 
 
 ## A toi de jouer
