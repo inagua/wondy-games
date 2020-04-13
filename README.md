@@ -8,6 +8,7 @@
 
 Table des matières
 
+- [Fonctionnalités](#fonctionnalités)
 - [A toi de jouer](#a-toi-de-jouer)
 - [Schema & Exemples](#schema--exemples)
 - [Introduction à JSON](#introduction-%C3%A0-json)
@@ -24,6 +25,11 @@ Table des matières
      - [Row](#row)
   -  [Library](#library)
      - [Document](#document)
+
+
+## Fonctionnalités
+
+Voir la page des [Release Notes](https://inagua.github.io/wondy-games/RELEASENOTES#v100).
 
 
 ## A toi de jouer

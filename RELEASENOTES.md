@@ -2,13 +2,18 @@
 
 ## v1.0.0
 
+### v0.0.4
+
+- (i18n) Save language in storage and dynamically update displayed texts.
+- (release) Update App icon for platforms.
+
 ### v0.0.3
 
 - (documents) Fix bug on Android can not pen PDF.
 
 ### v0.0.2
 
-- (github) Use github pages for website layout: https://inagua.github.io/wondy-games/
+- (github) Use github pages for website layout: [https://inagua.github.io/wondy-games/](https://inagua.github.io/wondy-games/)
 - (i18n) Translate English part
 - (cards) Slide to go to next image
 - (feedback) Dedicated page for user feedback
