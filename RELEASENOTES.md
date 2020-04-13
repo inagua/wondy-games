@@ -1,10 +1,12 @@
-# v1.0.0
+# Release Notes
 
-## v0.0.3
+## v1.0.0
+
+### v0.0.3
 
 - (documents) Fix bug on Android can not pen PDF.
 
-## v0.0.2
+### v0.0.2
 
 - (github) Use github pages for website layout: https://inagua.github.io/wondy-games/
 - (i18n) Translate English part
@@ -16,7 +18,7 @@
 - (7wd) Expand instructions by default
 - (game) Remove refresh feature on cards
 
-## v0.0.1
+### v0.0.1
 
 - Calculateur de score, Instructions de jeu, PDF des règles, quelques cartes du jeu "7 Wonders - Duel"
 - Import d'autres jeux
